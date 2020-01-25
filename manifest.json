@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "alexa-spa-global-media-controls",
+  "version": "0.0.1",
+  "description": "Add global media controls to Alexa SPA",
+  "icons": {
+    "512": "icons/512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://alexa.amazon.co.jp/spa/*",
+        "https://alexa.amazon.com/spa/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "silent.ogg"
+  ],
+  "permissions": [
+    "https://alexa.amazon.co.jp/spa/*",
+    "https://alexa.amazon.com/spa/*"
+  ]
+}
